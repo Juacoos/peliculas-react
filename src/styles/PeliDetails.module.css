@@ -1,0 +1,33 @@
+.detailsContainer{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+.columna{
+  max-width: 300px;
+  margin: 15px;
+  height: auto;
+  height: 80%;
+}
+
+.imgPelicula{
+  width: auto;
+  border-radius: 10px;
+}
+
+.details{
+  max-width: 400px;
+  font-size: 1.4rem;
+}
+
+.firstItem{
+  margin-top: 0;
+}
+
+@media (max-width:800px){
+  .details{
+    max-width: 300px;
+  }
+}

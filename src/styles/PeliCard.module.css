@@ -3,7 +3,9 @@
   font-size: 1.5rem;
   text-align: center;
 }
-
+.peliCard:hover{
+  opacity: 0.75;
+}
 .movieImg{
   width: 230px;
   height: 345px;
