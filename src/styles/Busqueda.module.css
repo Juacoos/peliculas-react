@@ -1,0 +1,32 @@
+.busquedaContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.busquedaBox{
+  position: relative;
+}
+
+.busquedaBtn{
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  height: 100%;
+  border: none;
+  background: none;
+}
+
+.busquedaInput{
+  font-size: 1.2rem;
+  height: 25px;
+  border-radius: 4px;
+  padding: 3px 30px 3px 10px;
+  opacity: 0.75;
+}
+
+.busquedaInput:focus,.busquedaBtn:focus{
+  outline: none;
+  opacity: 1;
+}
+
