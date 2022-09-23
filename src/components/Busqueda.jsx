@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import { AiOutlineSearch } from 'react-icons/ai';
 import styles from '../styles/Busqueda.module.css';
 import { useNavigate } from "react-router-dom";
@@ -10,17 +9,12 @@ function Busqueda() {
   const query = useQuery();
   const search = query.get("search");
 
-  const [searchText, setSearchText] = useState("");
   const navigate = useNavigate();
 
-  useEffect(() => {
-    setSearchText(search || "");
-  }, [search])
-  
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/?search=" + searchText);
   }
 
   return (
@@ -29,8 +23,13 @@ function Busqueda() {
         
         <input 
           className={styles.busquedaInput} type="text" 
-          value={searchText}
-          onChange={(e) => setSearchText(e.target.value)}
+          value={search ?? ""}
+          placeholder='Search'
+          aria-label='Search Movies'
+          onChange={(e) => {
+            const value = e.target.value;
+            navigate("/?search=" + value);
+          }}
         />
         
         <button className={styles.busquedaBtn} type='submit'>

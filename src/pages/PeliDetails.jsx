@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Spinner from '../components/Spinner';
 import styles from "../styles/PeliDetails.module.css";
+import getPeliculaImg from '../utils/getPeliculaImg';
 import { get } from "../utils/httpCliente";
 
 export function PeliDetails(){
@@ -25,7 +26,8 @@ export function PeliDetails(){
   }
 
 
-  const imgUrl = "https://image.tmdb.org/t/p/w300" + pelicula.poster_path;
+  const imgUrl = getPeliculaImg(pelicula.poster_path)
+
   return (
     <div className={styles.detailsContainer}>
       <img 
